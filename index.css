@@ -1,0 +1,107 @@
+* {
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+  background: #faeee0;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  color: #2d2424;
+  text-align: center;
+}
+
+/* checker board style - 棋盤樣式 */
+
+table {
+  border-collapse: collapse; /* collapse into a single border */
+  width: 500px;
+  height: auto;
+  box-shadow: 0px 8px 15px #5c3d2e75;
+}
+
+td {
+  width: 4rem;
+  height: 4rem;
+  border: solid 2px #e0c097;
+}
+
+/* empty feild - would not have any pieces */
+/* 旗子只能走斜角，意味著只能在深色區塊移動 */
+.empty {
+  background: #e0c097;
+}
+/* dark feild */
+td {
+  background-color: #5c3d2e;
+  text-align: center;
+
+  /* cursor: pointer; */
+}
+
+/* checkers 旗子 */
+.darkPiece {
+  background: #2d2424;
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.lightPiece {
+  background: #eec8a4;
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 1px solid white;
+}
+/* 當旗子走到最後一排的時候，會升級成 King */
+
+.king.darkPiece {
+  background: olive;
+}
+.king.lightPiece {
+  background: darkgoldenrod;
+}
+
+.whitePlayer {
+  width: 10rem;
+  margin-left: 1rem;
+  margin-bottom: 2.2rem;
+  color: #5c3d2e;
+}
+
+hr {
+  border: solid 1px #ddd7d7;
+  background: #5c3d2e;
+}
+
+/* 一開始是由白棋先下，因此黑棋預設會是淺咖啡色 */
+.blackPlayer {
+  width: 10rem;
+  margin-left: 1rem;
+  margin-bottom: 2.2rem;
+  color: #5c3d2e4f;
+}
+
+span {
+  display: inline-block;
+}
