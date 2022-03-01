@@ -5,19 +5,24 @@
 body {
   background: #faeee0;
   margin: 0 auto;
+  width: 100%;
+  /* border: solid 1px; */
 }
 
 .container {
   display: flex;
   /* align-items: center; */
   justify-content: center;
+  flex-direction: column;
 }
 
 .wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  margin: 0 auto;
+  /* border: solid 1px; */
+  /* height: 100vh; */
 }
 
 h1 {
@@ -29,14 +34,14 @@ h1 {
 
 table {
   border-collapse: collapse; /* collapse into a single border */
-  width: 500px;
+  width: 80%;
   height: auto;
   box-shadow: 0px 8px 15px #5c3d2e75;
 }
 
 td {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   border: solid 2px #e0c097;
 }
 
@@ -57,8 +62,8 @@ td {
 .darkPiece {
   background: #2d2424;
   border-radius: 100%;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin: 0 auto;
   cursor: pointer;
   border: 1px solid white;
@@ -67,8 +72,8 @@ td {
 .lightPiece {
   background: #eec8a4;
   border-radius: 100%;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin: 0 auto;
   cursor: pointer;
   border: 1px solid white;
@@ -83,9 +88,6 @@ td {
 }
 
 .whitePlayer {
-  width: 10rem;
-  margin-left: 1rem;
-  margin-bottom: 2.2rem;
   color: #5c3d2e;
 }
 
@@ -94,14 +96,32 @@ hr {
   background: #5c3d2e;
 }
 
+.wrap2 {
+  /* border: solid 1px red; */
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
 /* 一開始是由白棋先下，因此黑棋預設會是淺咖啡色 */
 .blackPlayer {
-  width: 10rem;
-  margin-left: 1rem;
-  margin-bottom: 2.2rem;
   color: #5c3d2e4f;
+  margin-left: 30px;
 }
 
 span {
   display: inline-block;
+}
+
+@media screen and (min-width: 576px) {
+  .wrap2 {
+    justify-content: center;
+  }
+  .whitePlayer {
+    margin-left: 30px;
+  }
+  table {
+    width: 100%;
+  }
 }
